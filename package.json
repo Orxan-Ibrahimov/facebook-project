@@ -1,0 +1,17 @@
+{
+  "name": "facebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "summernote": "^0.8.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "css": "node-sass assets/scss -o assets/css",
+    "css:watch": "npm run css && node-sass --output-style compressed assets/scss/style.scss -wo assets/css/style.css"
+  },
+  "author": "Orxan Ibrahimov",
+  "license": "ISC"
+}

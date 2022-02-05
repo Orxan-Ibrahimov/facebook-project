@@ -1,0 +1,373 @@
+@import "reset";
+
+body {
+    background-color: black;
+}
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background: black;
+    width: 100%;
+}
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #3a3b3c;
+
+    input {
+        background-color: #3a3b3c;
+        &:focus {
+            background-color: #3a3b3c;
+            box-shadow: none;
+            border: none;
+        }
+    }
+}
+
+.social-icons {
+    li {
+        a {
+            transition: all 0.3s linear;
+            color: white;
+            i {
+                font-size: 25px;
+            }
+
+            &:hover {
+                color: #2b7efd;
+            }
+        }
+    }
+    li.active {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #2b7efd;
+        }
+
+        a {
+            color: #2b7efd;
+        }
+    }
+}
+
+.user {
+    a {
+        transition: all 0.3s linear;
+        border-radius: 1rem;
+        padding: 0.25rem;
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+    }
+}
+
+.menu-icon {
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        color: white;
+        background-color: #3a3b3c;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+}
+
+.option {
+    &:hover {
+        background-color: #3a3b3c;
+    }
+
+    .special-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        background-color: #606770;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+
+    .box {
+        color: #2e89ff;
+        i {
+            display: inline-block;
+            font-size: 10px;
+        }
+    }
+
+    .last-seen {
+        right: 0;
+        font-size: 10px;
+    }
+}
+
+// hakinda sehifesi
+.profile-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .profile-sub-about {
+        display: flex;
+    }
+}
+
+.profile {
+    width: 100%;
+    height: 400px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.avatar {
+    margin-top: -35px;
+    margin-left: 2rem;
+}
+
+.facemenu-list {
+    display: flex;
+    padding: 0;
+
+    &-item {        
+        transition: all .2s linear;
+
+        a,button{
+            padding: 16px;
+            display: inline-block;   
+            cursor: pointer;  
+            width: 100%;                 
+        }
+        
+        .sub-facemenu-list{
+            display: none;
+            position: absolute;
+            background-color: #222;
+            width: 300px;
+            max-width: 300px;
+            border-radius: 1rem;   
+           
+        }
+
+        &:hover:not(.active){
+            background-color: #3a3b3c;
+        }        
+    }
+
+    .active{
+        border-bottom: 3px solid #2e89ff;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        a{
+            color: #2e89ff !important;
+        }
+    }
+
+    
+}
+
+.params{
+    display: inline-block;
+    padding: 16px;
+    margin: 10px;
+    transition: all .2s linear;
+    background-color: #3a3b3c;
+
+    &:hover{
+        background-color: #585b5e;
+    }
+}
+
+.personal-info{
+    background-color: #3a3b3c;
+   
+    i{
+        color: #8c939d;
+        font-size: 20px;
+    }
+}
+
+.photos{
+    background-color: #3a3b3c;
+
+    .heading{
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 8px;
+         &:hover{
+             text-decoration: underline;
+         }
+
+    }
+    .all-photos{
+        color: #2e89ff;
+        padding: 8px;
+        font-size: 1.25rem;
+        
+        &:hover{
+            background-color: #585b5e;  
+        }
+    }
+
+    img:hover{
+        opacity: .7;
+    }
+}
+
+.copyright{
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.story{
+    background-color: #2d2e2f;
+    padding: 8px 16px;
+    border-radius: 1rem;
+
+    i{
+        font-size: 24px;
+    }
+
+    input{
+        background-color: #3a3b3c;
+        
+        &::placeholder{
+            color: #8c939d;
+        }
+
+        &:focus-visible{
+            outline: none;
+        }
+    }
+
+    .story-image{
+        &:hover{
+            opacity: .7;
+        }
+    }
+
+    ul{
+        li{
+            a{
+                &:hover{
+                    background-color: #3a3b3c;
+                }
+            }
+        }
+    }
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 8px 16px;
+    background-color: #2d2e2f;
+
+    a{
+        padding: 8px;
+        background-color: #3a3b3c;
+
+        i{
+            color: #8c939d;
+        }
+        
+        &:hover{
+            background-color: #585b5e;
+        }
+    }
+}
+
+.personal-about{
+    li{
+        a{
+            padding: 4px 8px;
+            display: block;
+            width: 100%;
+            border-radius: .5rem;          
+        }   
+        
+        &:not(.active){
+
+            a{
+                
+            &:hover{
+                background-color: #585b5e;
+            }  
+            }
+        }
+    }
+
+    .active{
+       
+        a{            
+            background-color: #2d88ff33;
+            color: #2e89ff !important;
+        }
+    }
+}
+
+#follows{
+    li{
+        max-width: 175px;
+    }
+}
+// single line classes
+.dark-layout{
+    background-color: #2d2e2f;   
+}
+
+.rounded-special{   
+    border-radius: 1rem;
+}
+
+.text-hover-underline{   
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.bg-buton{
+background-color: #3a3b3c;
+
+&:hover{
+    background-color: #585b5e;
+}
+}
+
+@media only screen and (max-width: 768px) {
+    .avatar {
+        margin-top: -85px !important;
+    }
+    .profile-about {
+        flex-direction: column;
+
+        .profile-sub-about {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
